@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Phone Book</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="styles.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Spicy+Rice&display=swap" rel="stylesheet">
+    </head>
+    <body>
+    
+        <div class="container py-5">
+            <h1 class="text-center custom-title">Phone Book</h1>
+            <h2 class="text-center custom-subtitle">📞 ☎️ 📱</h2>
+
+            <div class="mb-3">
+                <input type="text" id="searchInput" class="form-control" placeholder="Search by name, phone, or email...">
+            </div>
+
+            <div class="sort-buttons">
+                <button class="sort-btn" onclick="sortByName()">Sort by Name</button>
+                <button class="sort-btn" onclick="sortByPhone()">Sort by Phone</button>
+                <button class="sort-btn" onclick="sortByEmail()">Sort by Email</button>
+            </div>
+
+        
+            <div class="card shadow-lg p-4 border-0">
+                <h3 class="text-center text-dark">Add a Contact</h3>
+
+                <form id="phonebook-form" class="mb-4">
+                    <div class="row g-3">
+                        <div class="col-md-4">
+                            <input type="text" class="form-control" placeholder="Name" id="name" required>
+                        </div>
+                        <div class="col-md-4">
+                            <input type="text" class="form-control" placeholder="Phone Number" id="phone" required>
+                        </div>
+                        <div class="col-md-4">
+                            <input type="email" class="form-control" placeholder="Email" id="email" required>
+                        </div>
+                        <button type="submit" id="submit-btn" class="btn btn-success">Add Entry</button>
+                    </div>
+                </form>
+        
+                <h3 class="text-center text-dark">Contacts</h3>
+                <table class="table table-striped table-hover">
+                    <thead class="bg-primary text-white">
+                        <tr>
+                            <th>Name</th>
+                            <th>Phone Number</th>
+                            <th>Email</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="phonebook-entries"></tbody>
+                </table>
+            </div>
+        </div>
+        
+    
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="app.js"></script>
+    </body>
+</html>
