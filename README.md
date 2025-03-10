@@ -43,7 +43,7 @@ To run the Phone Book application, follow these steps:
 1. **Clone the repository** (or download the files).
     - If you're using Git, run:
       ```bash
-      git clone https://github.com/your-username/phone-book-app.git
+      git clone https://github.com/aishanukovic/phone-book.git
       ```
 
 2. **Open the project in Visual Studio Code (VSCode)** or another code editor of your choice.
